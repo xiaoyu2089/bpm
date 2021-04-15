@@ -76,3 +76,5 @@
 ~~~
 
 注意SpringBoot、SpringCould和 alibaba Cloud对应的版本关系
+
+增加zipkin文件，sluth结合zipkin 实现微服务链路追踪。 zipkin可以基于mysql和es
