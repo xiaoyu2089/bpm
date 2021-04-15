@@ -70,6 +70,7 @@
 
     <modules>
         <module>application_gateway</module>
+        <module>application_common</module>
         <module>service_system</module>
         <module>service_order</module>
     </modules>
