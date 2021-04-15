@@ -16,6 +16,11 @@ public class HomeController {
 
     @RequestMapping("/index")
     public String index(){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "service_order home index|"+systemFeignClient.systemHomeIndex();
     }
 }
