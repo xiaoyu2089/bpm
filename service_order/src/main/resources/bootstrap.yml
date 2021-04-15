@@ -15,5 +15,16 @@ feign:
       default:
         connect-timeout: 500  #链接最大时间
         read-timeout: 60000 # 链接后等待被调用方最长的返回时间 一分钟
+#  hystrix:
+#    enabled: true
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+        timeout:
+          enabled: true
 

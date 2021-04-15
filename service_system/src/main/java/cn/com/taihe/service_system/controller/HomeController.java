@@ -9,6 +9,11 @@ public class HomeController {
 
     @RequestMapping("index")
     public String index(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "service_system home index";
     }
 }
