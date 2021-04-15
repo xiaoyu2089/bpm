@@ -1,0 +1,19 @@
+debug: false
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: system
+        uri: lb://system # gateway 要求服务不能带有下划线，之前写service_system就会报错
+        predicates:
+        - Path=/system/**
+server:
+  port: 9000
