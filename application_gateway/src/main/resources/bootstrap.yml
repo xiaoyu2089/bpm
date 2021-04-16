@@ -15,5 +15,9 @@ spring:
         uri: lb://system # gateway 要求服务不能带有下划线，之前写service_system就会报错
         predicates:
         - Path=/system/**
+      - id: order
+        uri: lb://order
+        predicates:
+        - Path=/order/**
 server:
   port: 9000
